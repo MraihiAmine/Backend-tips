@@ -1,0 +1,12 @@
+The thing to notice in the @ManyToMany annotation is how we configure the 
+fetching strategy, which can be lazy or eager. In this case, we've set 
+the fetch to EAGER, so that when we retrieve a SuperHero from the 
+database, we'll also automatically retrieve all of its corresponding 
+Movies.
+
+If we chose to perform a LAZY fetch instead, we would only retrieve each 
+Movie as it was specifically accessed. Lazy fetching is only possible 
+while the SuperHero is attached to the EntityManager; otherwise 
+accessing a superhero's movies will throw an exception. We want to be 
+able to access a superhero's movies on demand, so in this case we 
+choose the EAGER fetching strategy.
