@@ -1,0 +1,4 @@
+Cascade operations define how superheroes and their corresponding 
+movies are persisted to and from the database.
+we've set the cascade attribute to CascadeType.PERSIST, which
+means that when we save a superhero, its movies will also be saved.
